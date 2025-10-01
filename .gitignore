@@ -1,0 +1,40 @@
+# Build directories
+build/
+CMakeFiles/
+Makefile
+CMakeCache.txt
+cmake_install.cmake
+
+# User-specific files
+CMakeLists.txt.user
+
+# Generated files
+ui_*.h
+qrc_*.cpp
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+*.pdb
+*.ilk
+*.manifest
+
+# IDE files (if using VS)
+*.sln
+*.vcxproj
+*.vcxproj.filters
+.vs/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Qt-specific generated files
+moc_*.cpp
+ moc_*.h
+ ui_*.h
+ qrc_*.cpp

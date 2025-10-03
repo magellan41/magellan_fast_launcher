@@ -41,7 +41,7 @@ bool HotkeyHandler::nativeEventFilter(const QByteArray &eventType, void *message
     Q_UNUSED(result)
 
 #ifdef Q_OS_WIN
-    MSG *msg = static_cast<MSG*>(message);
+    MSG *msg = static_cast<MSG *>(message);
     if (msg->message == WM_HOTKEY) {
         if (msg->wParam == m_hotKeyId) {
             emit hotKeyPressed();

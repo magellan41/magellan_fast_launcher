@@ -1,17 +1,17 @@
 #ifndef MAGELLAN_FAST_LAUNCHER_SQLLITE_H
 #define MAGELLAN_FAST_LAUNCHER_SQLLITE_H
 
-
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QSqlRecord>
 #include <QDebug>
 #include <QList>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QSqlRecord>
 
 #include "Lnk.h"
 
-class LnkDB {
+class LnkDB
+{
 public:
     LnkDB();
 
@@ -51,7 +51,4 @@ private:
     QSqlDatabase db;
 };
 
-
 #endif // MAGELLAN_FAST_LAUNCHER_SQLLITE_H
-
-

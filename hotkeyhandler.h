@@ -1,10 +1,11 @@
 #ifndef HOTKEYHANDLER_H
 #define HOTKEYHANDLER_H
 
-#include <QObject>
 #include <QAbstractNativeEventFilter>
+#include <QObject>
 
-class HotkeyHandler : public QObject, public QAbstractNativeEventFilter{
+class HotkeyHandler : public QObject, public QAbstractNativeEventFilter
+{
     Q_OBJECT
 public:
     HotkeyHandler();

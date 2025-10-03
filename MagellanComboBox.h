@@ -1,19 +1,20 @@
 #ifndef MAGELLANCOMBOBOX_H
 #define MAGELLANCOMBOBOX_H
 
-
+#include <QAbstractItemView>
 #include <QComboBox>
-#include <QKeyEvent>
 #include <QCompleter>
 #include <QDebug>
-#include <QAbstractItemView>
+#include <QKeyEvent>
 
 class MagellanComboBox : public QComboBox
 {
     Q_OBJECT
 
 public:
-    explicit MagellanComboBox(QWidget *parent = nullptr) : QComboBox(parent) {}
+    explicit MagellanComboBox(QWidget *parent = nullptr)
+        : QComboBox(parent)
+    {}
 
 signals:
     void returnPressed(const QString &firstSuggestion);
@@ -29,7 +30,8 @@ protected:
             if (completer && completer->popup()->isVisible() && completer->completionCount() > 0) {
                 QModelIndex firstIndex = completer->completionModel()->index(0, 0);
                 if (firstIndex.isValid()) {
-                    QString firstText = completer->completionModel()->data(firstIndex, Qt::UserRole).toString();
+                    QString firstText
+                        = completer->completionModel()->data(firstIndex, Qt::UserRole).toString();
                     emit returnPressed(firstText);
                     return;
                 }
@@ -40,6 +42,5 @@ protected:
         }
     }
 };
-
 
 #endif // MAGELLANCOMBOBOX_H

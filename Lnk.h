@@ -2,7 +2,8 @@
 #define LNK_H
 #include <QCoreApplication>
 
-class Lnk{
+class Lnk
+{
 public:
     Lnk();
 
@@ -34,7 +35,6 @@ public:
     int getStatus() const;
 
     void setStatus(int status);
-
 
 private:
     int id;

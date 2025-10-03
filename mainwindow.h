@@ -7,16 +7,16 @@
 
 #include <QScreen>
 
-#include <QVBoxLayout>
+#include <QCompleter>
 #include <QLineEdit>
 #include <QStandardItemModel >
-#include <QCompleter>
+#include <QVBoxLayout>
 
-#include <QDir>
 #include <QCoreApplication>
+#include <QDir>
 
-#include <QMimeData>
 #include <QDragEnterEvent>
+#include <QMimeData>
 
 #include <QMessageBox>
 
@@ -26,10 +26,9 @@
 
 #include <QSettings>
 
-#include "hotkeyhandler.h"
 #include "MagellanComboBox.h"
+#include "hotkeyhandler.h"
 #include "magellan_fast_launcher_sqllite.h"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -48,7 +47,7 @@ public:
 protected:
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dropEvent(QDropEvent *event) override;
-     void changeEvent(QEvent *event) override;
+    void changeEvent(QEvent *event) override;
     void closeEvent(QCloseEvent *event) override;
 
 private slots:
